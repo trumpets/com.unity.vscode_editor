@@ -182,7 +182,7 @@ namespace VSCodePackage
 
         static bool ShouldSyncOnReimportedAsset(string asset)
         {
-            return k_ReimportSyncExtensions.Contains(new FileInfo(asset).Extension);
+            return k_ReimportSyncExtensions.Contains(Path.GetExtension(asset));
         }
 
         public void Sync()
